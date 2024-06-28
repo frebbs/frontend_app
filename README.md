@@ -1,8 +1,6 @@
 Certainly! Here's a README.md file for your project, formatted in Markdown:
 
-# AARONDEV.CO.UK - Personal Website
-
-Welcome to the repository for AARONDEV.CO.UK, a personal website project that showcases full-stack development skills using Node.js, Nunjucks, Bootstrap, SCSS, and more.
+# frontend_app - Personal Website
 
 ## Project Overview
 

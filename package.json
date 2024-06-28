@@ -15,7 +15,7 @@
     "build:js": "webpack --mode production",
     "build:sass": "sass src/scss/main.scss:public/css/main.css",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
-    "lint:js": "eslint . --ext .js --fix",
+    "lint:js": "eslint --fix .",
     "test": "echo 'Tests Ran!'"
   },
   "lint-staged": {
