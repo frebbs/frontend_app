@@ -1,6 +1,3 @@
-import importPlugin from 'eslint-plugin-import';
-import unicornPlugin from 'eslint-plugin-unicorn';
-
 export default [
 	{
 		files: ['**/*.js'],
@@ -17,16 +14,10 @@ export default [
 		linterOptions: {
 			reportUnusedDisableDirectives: true,
 		},
-		plugins: {
-			import: importPlugin,
-			unicorn: unicornPlugin
-		},
 		rules: {
 			'semi': ['error', 'always'],
 			'indent': ['error', 'tab'],
-			"no-unused-vars": ["error", { "args": "after-used", "argsIgnorePattern": "^next$" }],
-			'import/no-unused-modules': 'error',
-			'unicorn/better-regex': 'error'
+			"no-unused-vars": ["error", { "args": "after-used", "argsIgnorePattern": "^next$" }]
 		}
 	}
 ];
