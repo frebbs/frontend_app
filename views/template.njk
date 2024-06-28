@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ htmlLang | default("en", true) }}"{% if htmlClasses %} class="{{ htmlClasses }}"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <title{% if pageTitleLang %} lang="{{ pageTitleLang }}"{% endif %}>{% block pageTitle %}AARONDEV.CO.UK - A Personal Project{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% block headIcons %}
+  {% endblock %}
+
+  {% block head %}
+    <link rel="stylesheet" href="/css/main.css">
+  {% endblock %}
+</head>
+<body class="dark-mode{% if bodyClasses %} {{ bodyClasses }}{% endif %}"{% for attribute, value in bodyAttributes %} {{ attribute }}="{{ value }}"{% endfor %}>
+<script{% if cspNonce %} nonce="{{ cspNonce }}"{% endif %}>document.body.className += ' js-enabled';</script>
+{% block bodyStart %}{% endblock %}
+
+{% block header %}
+  <!-- Bootstrap NavBar or custom header -->
+{% endblock %}
+
+{% block main %}
+  <div class="container{% if containerClasses %} {{ containerClasses }}{% endif %}">
+    {% block beforeContent %}{% endblock %}
+    <main class="mt-3{% if mainClasses %} {{ mainClasses }}{% endif %}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+<script src="/js/bundle.js"></script>
+{% block bodyEnd %}{% endblock %}
+</body>
+</html>

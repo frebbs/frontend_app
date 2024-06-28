@@ -1,0 +1,11 @@
+.idea
+*.iml
+out
+gen
+
+.husky
+.env
+node_modules
+/public
+gitRepoDetailsJune2024.json
+.env

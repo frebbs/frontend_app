@@ -1,0 +1,40 @@
+{% extends "template.njk" %}
+
+{% block header %}
+    <div class="container">
+        {% from "./components/header/macro.njk" import mainNavbar %}
+        {{ mainNavbar(configData) }}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h1 class="display-1 text-center">Contact Us</h1>
+                    <form action="#" method="" class="mt-4">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" placeholder="Your Message" required rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% from "./components/footer/macro.njk" import footerNav %}
+    {{ footerNav(configData) }}
+{% endblock %}

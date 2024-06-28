@@ -1,0 +1,21 @@
+{% extends "template.njk" %}
+
+{% block header %}
+    <div class="container">
+        {% from "./components/header/macro.njk" import mainNavbar %}
+        {{ mainNavbar(configData) }}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="welcome-banner centerOnPage">
+        <h1 class="display-1 text-light">RaspberryPi Intranet </h1>
+        <p class="lead">Learn more below....</p>
+        <a href="#main-content" class="btn btn-primary text-light 7mt-3">Get Started</a>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% from "./components/footer/macro.njk" import footerNav %}
+    {{ footerNav(configData) }}
+{% endblock %}

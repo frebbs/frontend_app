@@ -1,0 +1,19 @@
+{% extends "template.njk" %}
+
+
+{% block content %}
+    {% from "./components/header/macro.njk" import mainNavbar %}
+
+    {{ mainNavbar(configData) }}
+
+    <h1 class="test">Oh no, im sad to say this is a 404 Error page :(</h1>
+{% endblock %}
+
+{% block footer %}
+    {% from "./components/footer/macro.njk" import footerNav %}
+
+    {{ footerNav(configData) }}
+{% endblock %}
+
+{% block bodyEnd %}
+{% endblock %}

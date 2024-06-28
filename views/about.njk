@@ -1,0 +1,32 @@
+{% extends "template.njk" %}
+
+{% block header %}
+    <div class="container">
+        {% from "./components/header/macro.njk" import mainNavbar %}
+        {{ mainNavbar(configData) }}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="about-banner centerOnPage">
+        <h1 class="about-title">About AARONDEV.CO.UK</h1>
+        <p class="about-intro">Dive into the world of web development and innovative design with AARONDEV.CO.UK.</p>
+        <div class="about-section">
+            <h2>Our Philosophy</h2>
+            <p>Driven by passion and precision, we aim to create software that empowers and inspires.</p>
+        </div>
+        <div class="about-section">
+            <h2>What We Do</h2>
+            <p>From complex backend solutions to beautifully crafted frontends, explore how we make ideas come to life.</p>
+        </div>
+        <div class="about-section">
+            <h2>Meet the Team</h2>
+            <p>Our team of dedicated developers and designers are at the heart of every project.</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% from "./components/footer/macro.njk" import footerNav %}
+    {{ footerNav(configData) }}
+{% endblock %}
