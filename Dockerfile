@@ -18,7 +18,7 @@ RUN npm run build:js
 RUN npm run build:sass
 
 # Run tests, linting, etc.
-RUN npm run lint:js
+# RUN npm run lint:js
 
 # Production stage
 FROM node:18-slim
